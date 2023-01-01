@@ -21,7 +21,9 @@ public class Trapping_Rain_Water {
     public static void main(String[] args) {
         int arr[]={3,0,1,2,5};
         int arr2[]={2,0,2};
+        int arr3[]={5,0,6,2,3};
         System.out.println(getWater(arr,arr.length));
         System.out.println(getWater(arr2,arr2.length));
+        System.out.println(getWater(arr3,arr3.length));
     }
 }
