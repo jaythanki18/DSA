@@ -19,6 +19,8 @@ public class Min_Flips_to_Make_same_Group {
     }
     public static void main(String[] args) {
         int arr[]={0,0,1,1,0,0,1,1,0,1};
+        int arr2[]={0,0,1,1,0,0,1,1,0};
         printFlips(arr, arr.length);
+        printFlips(arr2, arr2.length);
     }
 }
