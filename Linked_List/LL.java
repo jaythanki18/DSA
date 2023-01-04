@@ -1,13 +1,18 @@
 package Linked_List;
-
+import java.util.*;
 public class LL {
     Node head;
+    private int size;
+    LL(){
+        this.size=0;
+    }
     class Node{
         String data;
         Node next;
         Node(String data){
             this.data=data;
             this.next=null;
+            size++;
         }
     }
 
@@ -56,27 +61,33 @@ public class LL {
             System.out.println("The list is empty");
             return;
         }
+        size--;
         head=head.next;
     }
 
     //Delete last
     public void deleteLast(){
-        if(head==null){
-            System.out.println("The list is empty");
-            return;
-        }
-        if(head.next==null){
-            head=null;
-            return;
-        }
+       if(head==null){
+           System.out.println("The list is empty");
+           return;
+       }
+       size--;
+       if(head.next==null){
+           head=null;
+           return;
+       }
+       Node secondNode=head;
+       Node lastNode=head.next;
+       while(lastNode.next!=null){
+           lastNode=lastNode.next;
+           secondNode=secondNode.next;
+       }
+       secondNode.next=null;
+    }
 
-        Node secondLast=head;
-        Node lastNode=head.next;
-        while(lastNode.next!=null){
-            lastNode=lastNode.next;
-            secondLast=secondLast.next;
-        }
-        secondLast.next=null;
+    //get size
+    public int getSize(){
+        return size;
     }
     public static void main(String[] args) {
         LL list=new LL();
@@ -88,5 +99,16 @@ public class LL {
         list.printList();
         list.addFirst("this");
         list.printList();
+
+        list.deleteFirst();
+        list.printList();
+        list.deleteLast();
+        list.printList();
+
+        System.out.println(list.getSize());
+
+        list.addFirst("list");
+        System.out.println(list.getSize());
+
     }
 }
