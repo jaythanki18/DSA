@@ -17,8 +17,6 @@ public class Insert_at_begin {
         return head;
     }
 
-
-
     public static void main(String[] args) {
         Node head=null;
         insertbegin(head,30);
