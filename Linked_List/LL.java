@@ -87,11 +87,13 @@ public class LL {
 
     //get size
     public int getSize(){
+
         return size;
     }
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
         LL list=new LL();
-        list.addFirst("a");
+        list.addFirst(sc.nextLine());
         list.addFirst("is");
         list.printList();
 
