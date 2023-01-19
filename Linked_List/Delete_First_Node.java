@@ -40,7 +40,6 @@ public class Delete_First_Node {
                 head=tail=null;
             }
         }
-
     }
 
     //display
