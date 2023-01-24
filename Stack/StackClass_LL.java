@@ -2,7 +2,7 @@ package Stack;
 
 import java.util.Scanner;
 
-public class StackClass {
+public class StackClass_LL {
     static class Node{
         int data;
         Node next;
