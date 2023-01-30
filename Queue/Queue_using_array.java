@@ -16,7 +16,7 @@ public class Queue_using_array {
             return rear==-1;
         }
 
-        //enqueue
+        //enqueue O(1)
         public static void add(int data){
             if(rear==size-1){
                 System.out.println("Full queue");
@@ -26,7 +26,7 @@ public class Queue_using_array {
             arr[rear]=data;
         }
 
-        //dequeue
+        //dequeue O(n)
         public static int remove(){
             if(isEmpty()){
                 System.out.println("Empty queue");
@@ -40,7 +40,7 @@ public class Queue_using_array {
             return front;
         }
 
-        //peek
+        //peek O(1)
         public static int peek(){
             if(isEmpty()){
                 System.out.println("Empty queue");
