@@ -1,6 +1,11 @@
 package sorting;
 
 public class insertionSort {
+    public static void print(int arr[]){
+        for(int i=0;i<arr.length;i++){
+            System.out.println(arr[i]);
+        }
+    }
     public static void main(String[] args) {
         int []arr={-1,5,8,7,-3,5,26,0};
 
@@ -13,8 +18,6 @@ public class insertionSort {
             }
             arr[j+1]=current;
         }
-        for (int k=0;k<arr.length;k++){
-            System.out.print(arr[k]+" ");
-        }
+        print(arr);
     }
 }
