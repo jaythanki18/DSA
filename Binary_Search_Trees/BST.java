@@ -54,7 +54,15 @@ public class BST {
         for(int i=0;i< values.length;i++){
             root=insert(root,values[i]);
         }
-        System.out.println(search(root,key));
+
+        inorder(root);
         System.out.println();
+
+        if (search(root,7)){
+            System.out.println("found");
+        }
+        else{
+            System.out.println("not found");
+        }
     }
 }
